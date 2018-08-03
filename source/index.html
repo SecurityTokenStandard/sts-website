@@ -24,7 +24,7 @@
     <div class="hero-body">
       <div class="container has-text-centered">
         <figure>
-          <div id="bm" style="height:300px;"> </div>
+          <div id="bm" style="height:500px;padding-bottom:100px;"> </div>
           <!-- <img src="assets/img/token-standard.gif" id="intro-img" alt="ST-20" /> -->
         </figure>
         <div id="intro-header-text">
@@ -57,8 +57,8 @@
 
       <div class="section-header-text">
         <h3 class="section-subheader">WITHOUT A STANDARD</h3>
-        <p class="section-text">Lorem ipsum dolor sit amet, sea malorum persecuti in. Ex pri putent commodo tamquam, fierent voluptaria honestatis
-          ea usu. Ex nec purto nulla scriptorem, ex animal facilisi gubergren mel. Clita platonem assentior ius ut.
+        <p class="section-text">Security Tokens will never be adopted in any meaningful way if issuers, investors, KYC providers, wallets, exchanges,
+          regulators and developers cannot work together within the same framework.
         </p>
       </div>
       <!-- /.section-header-text -->
@@ -80,8 +80,10 @@
 
       <div class="section-header-text">
         <h3 class="section-subheader">WITH A STANDARD</h3>
-        <p class="section-text">Lorem ipsum dolor sit amet, sea malorum persecuti in. Ex pri putent commodo tamquam, fierent voluptaria honestatis
-          ea usu. Ex nec purto nulla scriptorem, ex animal facilisi gubergren mel. Clita platonem assentior ius ut.
+        <p class="section-text">Security Tokens can become the default form for all financial securities. In the same way that the ERC-20 standard
+          helped to create the boom in utility tokens, the ST-20 standard will help create the boom in security tokens. All
+          participants in the ecosystem will be able to speak the same language and become confident building on this new
+          and exciting technology.
         </p>
       </div>
       <!-- /.section-header-text -->
@@ -102,9 +104,8 @@
   <section id="interface-spec" class="section">
     <div class="container has-text-centered">
       <div class="section-header-text">
-        <h3 class="section-subheader">The Standard</h3>
-        <p class="section-text">Lorem ipsum dolor sit amet, sea malorum persecuti in. Ex pri putent commodo tamquam, fierent voluptaria honestatis
-          ea usu. Ex nec purto nulla scriptorem, ex animal facilisi gubergren mel. Clita platonem assentior ius ut.
+        <h3 class="section-subheader">The Standard ST-20</h3>
+        <p class="section-text">A backwards compatible extension of ERC-20 to bring the multi-trillion dollar securities market to the blockchain.
         </p>
       </div>
       <!-- /.section-header-text -->
@@ -112,20 +113,20 @@
       <div class="container has-text-left">
         <pre>
           <code class="lang-solidity">
-            // ----------------------------------------------------------------------------
-            2 // ERC Token Standard #20 Interface
-            3 // https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20-token-standard.md
+            1 // ----------------------------------------------------------------------------
+            2 // The ST-20 Interface
+            3 //
             4 // ----------------------------------------------------------------------------
-            5 contract ERC20Interface {
-            6    function totalSupply() public constant returns (uint);
-            7    function balanceOf(address tokenOwner) public constant returns (uint balance);
-            8    function allowance(address tokenOwner, address spender) public constant returns (uint remaining);
-            9    function transfer(address to, uint tokens) public returns (bool success);
-           10    function approve(address spender, uint tokens) public returns (bool success);
-           11    function transferFrom(address from, address to, uint tokens) public returns (bool success);
-           12 
-           13    event Transfer(address indexed from, address indexed to, uint tokens);
-           14    event Approval(address indexed tokenOwner, address indexed spender, uint tokens);
+            5 //
+            6 contract IST20 { 
+            7   // off-chain hash 
+            8   bytes32 public tokenDetails; 
+            9 
+            10  //transfer, transferFrom must respect the result of verifyTransfer
+            11  function verifyTransfer(address _from, address _to, uint256 _amount) view public returns (bool success);12 
+            13  //used to create tokens 
+            14  function mint(address _investor, uint256 _amount) public returns (bool success); 
+            15 }
           </code>
         </pre>
       </div>
