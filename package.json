@@ -1,7 +1,7 @@
 {
-  "name": "erc-721",
+  "name": "st20",
   "version": "1.0.0",
-  "description": "erc721.org",
+  "description": "st-20 security token standard",
   "main": "main.js",
   "scripts": {
     "test": "gulp dist"
@@ -11,6 +11,7 @@
   "dependencies": {
     "bulma": "^0.6.2",
     "gulp": "^4.0.0",
+    "gulp-gh-pages": "^0.5.4",
     "highlightjs": "^9.10.0",
     "highlightjs-solidity": "^1.0.6",
     "node-sass": "^4.8.2"

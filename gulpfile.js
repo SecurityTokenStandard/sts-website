@@ -10,6 +10,7 @@ const gulp = require('gulp'),
   cleanCSS = require('gulp-clean-css'),
   del = require('del'),
   filter = require('gulp-filter');
+var deploy = require('gulp-gh-pages');
 
 const srcPath = 'source/'; // Path to our source files
 const distPath = './docs/'; // The output files, hosted by GitHub
@@ -119,6 +120,14 @@ gulp.task('serve', gulp.parallel('watch', function () {
 
   });
 }));
+
+gulp.task('deploy', function () {
+  return gulp.src("./docs/**/*")
+    .pipe(deploy({
+      remoteUrl: "https://github.com/SecurityTokenStandard/securitytokenstandard.github.io.git",
+      branch: "master"
+    }))
+});
 
 // Tasks that run on 'gulp' command
 gulp.task('default', gulp.task('serve'));
