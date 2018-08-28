@@ -1,0 +1,21 @@
+language: ruby
+rvm:
+  - 2.2
+install: gem install ruby_dep -v 1.3.1 && gem install jekyll -v 2.4.0 && gem install s3_website
+script: jekyll build
+after_success: s3_website push
+branches:
+  only:
+  - staging
+deploy:
+  - provider: s3
+    # You can refer to environment variables from Travis repo settings!
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    # Name of the S3 bucket to which your site should be uploaded.
+    bucket: securitytokenstandard-staging
+    # Prevent Travis from deleting your built site so it can be uploaded.
+    skip_cleanup: true
+    local_dir: docs
+    on:
+      branch: staging
