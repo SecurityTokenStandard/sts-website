@@ -1,5 +1,5 @@
 .publish
 node_modules
-docs
+docs/CNAME
 build
 package-lock.json
