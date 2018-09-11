@@ -213,19 +213,17 @@
         <pre>
           <code class="lang-solidity">
             1 // ----------------------------------------------------------------------------
-            2 // The ST-20 Interface
-            3 //
+            2 // The ERC-ST Fungible Token Metadata Standard
+            3 // See https://github.com/SecurityTokenStandard/EIP-Spec
             4 // ----------------------------------------------------------------------------
             5 //
-            6 contract IST20 { 
-            7   // off-chain hash 
-            8   bytes32 public tokenDetails; 
-            9 
-            10  //transfer, transferFrom must respect the result of verifyTransfer
-            11  function verifyTransfer(address _from, address _to, uint256 _amount) view public returns (bool success);12 
-            13  //used to create tokens 
-            14  function mint(address _investor, uint256 _amount) public returns (bool success); 
-            15 }
+            6 interface IERCST is IERCPFT { 
+            7    function getDocument(bytes32 _name) external view returns (string, bytes32);
+            8    function setDocument(bytes32 _name, string _uri, bytes32 _documentHash) external;
+            9    function issuable() external view returns (bool);
+            10   function checkSecurityTokenSend(address _from, address _to, bytes32 _tranche, uint256 _amount, bytes _data) external view returns (byte, bytes32, bytes32);
+            11   function issueByTranche(bytes32 _tranche, address _tokenHolder, uint256 _amount, bytes _data) external;
+            13 }
           </code>
         </pre>
       </div>
@@ -362,8 +360,8 @@
       <!-- /.section-header-text -->
       <div id="get-started-columns" class="columns">
         <div class="column">
-          <a href="https://github.com/SecurityTokenStandard">
-            <h4 class="get-started-links">View Guidelines</h4>
+          <a href="https://github.com/ethereum/EIPs/issues/1400">
+            <h4 class="get-started-links">View EIP</h4>
           </a>
         </div>
         <!-- <div class="column">
@@ -383,7 +381,7 @@
 
   <footer id="rdr-footer" class="footer">
     <div class="container has-text-centered">
-      <!-- <a class="github-button" href="https://github.com/securitytokenstandard" data-size="large" aria-label="Start Security Token Standard on GitHub">Get Started</a> -->
+      
       <p>Sponsored by
         <a href="https://polymath.network" target="_blank">Polymath</a>
       </p>
