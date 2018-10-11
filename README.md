@@ -4,8 +4,8 @@ Built to promote the development of a Security Token Standard . Forked from  [gw
 ## Building locally
 - Please be sure to have [Node.js](https://nodejs.org/en/) installed before moving forward
 - Install Gulp globally: `$ npm install --global gulp-cli`
-- Run `gulp` to develop locally
 - Run `gulp dist` to compile production ready version of website
+- Run `gulp` to develop locally
 
 ## Contribution Guidelines
 

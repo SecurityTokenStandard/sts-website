@@ -69,3 +69,18 @@ p {
   width: 100%;
   height: 100%;
 }
+
+.social_button{
+  border:1px solid #fff;
+  padding:10px;
+  border-radius:10px;
+  color:#fff;
+}
+.social_button i{
+  /* float:left; */
+  color:#fff;
+}
+.social_button:hover{
+  color:#fff;
+  border:none;
+}

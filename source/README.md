@@ -1,11 +1,8 @@
 # Security Token Standard Website
 Built to promote the development of a Security Token Standard . Forked from  [gwei.io]() project using [Gulp.js](https://gulp.js) for automation and Bulma as its framework.
 
-## Building the site
-- Please be sure to have [Node.js](https://nodejs.org/en/) installed before moving forward
-- Install Gulp globally: `$ npm install --global gulp-cli`
-- Run `gulp` to develop locally
-- Run `gulp dist` to compile production ready version of website
+## Code
+The source code for this page is kept at https://github.com/SecurityTokenStandard/sts-website
 
 ## Contribution Guidelines
 
@@ -39,7 +36,6 @@ Specifically:
 1. First come, first serve.
 2. Issues that have already been submitted by another user or are already known to the Polymath team are not eligible for bounty rewards. (Make sure that the issue has not been previously submitted or fixed in other more recent commits)
 3. Public disclosure of an actively exploitable vulnerability makes it ineligible for a bounty.
-
 
 
 ## Credits
