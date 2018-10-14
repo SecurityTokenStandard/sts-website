@@ -10,8 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "bulma": "^0.6.2",
-    "gulp": "^4.0.0",
-    "gulp-gh-pages": "^0.5.4",
     "highlightjs": "^9.10.0",
     "highlightjs-solidity": "^1.0.6",
     "node-sass": "^4.9.3"
@@ -19,10 +17,12 @@
   "devDependencies": {
     "browser-sync": "^2.24.6",
     "del": "^3.0.0",
+    "gulp": "^4.0.0",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-clean-css": "^3.10.0",
     "gulp-concat": "^2.6.0",
     "gulp-filter": "^5.1.0",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-imagemin": "^4.1.0",
     "gulp-livereload": "*",
     "gulp-newer": "^1.4.0",
