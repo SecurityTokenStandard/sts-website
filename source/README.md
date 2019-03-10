@@ -1,6 +1,6 @@
 # Security Token Standard Website
 
-Built to promote the development of a Security Token Standard . Web page forked from and inspired by [erc721.org](http://erc721.org) using [Gulp.js](https://gulp.js) for automation and Bootstrap CSS and FontAwesome.
+Built to promote the development of a Security Token Standard . Web page forked from and inspired by [erc721.org](http://erc721.org) using [Gulp.js](https://gulp.js) for automation and Bootstrap CSS and FontAwesome Icons.
 
 ## Code
 
