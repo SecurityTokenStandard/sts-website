@@ -124,7 +124,7 @@ gulp.task('serve', gulp.parallel('watch', function () {
 gulp.task('deploy', function () {
   return gulp.src("./docs/**/*")
     .pipe(deploy({
-      remoteUrl: "https://github.com/SecurityTokenStandard/securitytokenstandard.github.io.git",
+      remoteUrl: "git@github.com:SecurityTokenStandard/securitytokenstandard.github.io.git",
       branch: "master"
     }))
 });
